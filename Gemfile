@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# 12factor gem allows assets served in production for faster page load times and to see errors in Heroku logs
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

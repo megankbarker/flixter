@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+# bootstrap
+gem 'bootstrap-sass', '~> 3.3.5.1'
+
+#sprockets
+gem 'sprockets', '2.11.0'
+
+#sass-rails -  SCSS for stylesheets
+gem 'sass-rails'
+
 # 12factor gem allows assets served in production for faster page load times and to see errors in Heroku logs
 gem 'rails_12factor', group: :production
 
@@ -8,7 +17,7 @@ gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+# gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

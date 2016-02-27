@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# easily add forms to our app
+gem 'simple_form'
 # add user authentication
 gem 'devise', '>= 3.2.4'
 

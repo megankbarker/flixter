@@ -1,10 +1,16 @@
 source 'https://rubygems.org'
 
-# Use CarrierWave to upload files
-gem 'carrierwave'
+# Use CarrierWave-aws to upload files
+gem 'carrierwave-aws'
+
+#video uploads
+gem 'mini_magick'
+
+# nokogiri
+gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 
 # Use fog for carrierwave to be able to communicate with Amazon S3
-# gem 'fog', '~> 1.3.1'
+ gem 'fog'
 # easily add forms to our app
 gem 'simple_form'
 # add user authentication

@@ -15,6 +15,14 @@
     <% end %>
   </div>
 
+  <ul>
+    <% @course.sections.each do |section| %>
+      <li>
+        <%= section.title %>
+      </li>
+    <% end %>
+  </ul>
+
   <div class="col-sm-8 col-xs-12">
     <%= @course.description %>
   </div>

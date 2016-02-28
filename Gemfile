@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+# Use CarrierWave to upload files
+gem 'carrierwave'
+
+# Use fog for carrierwave to be able to communicate with Amazon S3
+# gem 'fog', '~> 1.3.1'
 # easily add forms to our app
 gem 'simple_form'
 # add user authentication

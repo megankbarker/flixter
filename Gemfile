@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Use CarrierWave-aws to upload files
-gem 'carrierwave-aws'
+gem 'carrierwave'
 
 #video uploads
 gem 'mini_magick'

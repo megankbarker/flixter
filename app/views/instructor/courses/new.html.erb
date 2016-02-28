@@ -5,14 +5,12 @@
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :cost %>
-    <br />
-
-     <div class="modal-body">
-   <%= f.input :image %>
-      </div>
- <div class="modal-footer">
-    <br />
+ <!--  <div class="modal-body"> -->
+   <%= f.input :image %>  <!-- , :as => :file -->
+<!--   </div> -->
+<!--  <div class="modal-footer"> -->
     <%= f.submit "Create", class: 'btn btn-primary' %>
+<!--   </div> -->
     <br />
   <% end %>
   <br />

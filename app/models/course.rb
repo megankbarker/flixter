@@ -1,7 +1,8 @@
 class Course < ActiveRecord::Base
   belongs_to :user
   has_many :sections
-  has_many :images
+
+  mount_uploader :image, ImageUploader # can't upload images without this
 
   validates :title, presence: true
   validates :description, presence: true

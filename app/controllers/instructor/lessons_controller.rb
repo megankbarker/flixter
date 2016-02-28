@@ -5,7 +5,7 @@ class Instructor::LessonsController < ApplicationController
   def new
     @section = Section.find(params[:section_id]) # need to load the section that is being referenced in the URL, by pulling the section_id from the param
     if @section.course.user != current_user
-      return render text: 'Unauthorized', status: unauthorized # By sending the unauthorized HTTP code, the browser becomes aware that the request was not successful and exits the function not executing line below
+      return render text: 'Unauthorized', status: :unauthorized # By sending the unauthorized HTTP code, the browser becomes aware that the request was not successful and exits the function not executing line below
     end
     @lesson = Lesson.new # before we add form to the view, we need to give the form a template object for the thing we're building the form for
   end

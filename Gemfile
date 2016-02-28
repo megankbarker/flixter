@@ -22,6 +22,9 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 #sprockets
 gem 'sprockets', '2.11.0'
 
+# AWS s3 image uploads
+gem 'figaro'
+
 #sass-rails -  SCSS for stylesheets
 gem 'sass-rails'
 

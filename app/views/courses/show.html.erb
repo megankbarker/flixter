@@ -1,4 +1,4 @@
-<!-- course detail page -->
+<!-- course show (student course detail) page -->
 
 <br />
 <!--booyah box -->
@@ -6,20 +6,20 @@
   <h1 class="text-center"><%= @course.title %></h1>
   <hr/>
     <%= image_tag @course.image, class: 'img-responsive' %>
-  <div class="col-xs-10 col-xs-offset-1">
+  <!-- <div class="col-xs-10 col-xs-offset-1"> -->
       <div class="col-sm-4 col-xs-12">
         <span class="label label-default">
           <%= number_to_currency @course.cost %>
         </span>
-          <br />
-          <br />
+
       <!-- checks if current user enrolled and shows enroll status -->
         <% if current_user && current_user.enrolled_in?(@course) %>
+          <br />
+          <br />
           <h3 class="label label-info">You Are Enrolled!</h3>
         <% else %>
           <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
         <% end %>
-        <hr/>
       <!-- + -->
       </div>
  <br />
@@ -27,16 +27,18 @@
 
       <div class="col-sm-8 col-xs-12">
         <%= @course.description %>
-      </div>
-  </div> <!-- enrollment button and course description end-->
+      </div> <!-- enrollment button and course description end-->
+<!--   </div> --> <!-- enrollment button and course description end-->
+ <hr />
   <!-- sections begin-->
   
-    <div class="section">
+  <div class="col-xs-12">
     <% @course.sections.each do |section| %>
-    <div class="booyah-box col-xs-10 col-xs-offset-1">
-      <br/><br/>
-  <!-- individual section separation-->
-      <h3 class="section text-center">  
+    <br />
+    <br />
+      <!-- individual section separation-->
+    <div class="section">
+      <h3>  
         <%= section.title %>
       </h3>
         <% section.lessons.each do |lesson| %>
@@ -50,12 +52,9 @@
               <% end %>
             </div>
           </div>
-        <% end %> <!-- end info for individual lesson -->
-
-      </div> <!-- closes individual lesson -->
-    <% end %> <!-- end info for individual section -->
-  </div> <!-- closes individual section -->
-
+        <% end %> <!-- closes individual lesson -->
+        <br class="clr" />
+      </div> <!-- end info for individual section -->
+    <% end %> 
+  </div>  <!-- end of section break -->
 </div> <!-- closes course and separates page booyah-box and footer -->
-
-  <br class="clr" />

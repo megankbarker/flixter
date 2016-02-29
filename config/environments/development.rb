@@ -1,7 +1,7 @@
 Flixter::Application.configure do
    config.action_mailer.default_url_options = { host: 'localhost:3030' }
    # config.action_mailer.delivery_method = :test
-   # config.web_console.whitelisted_ips = '10.0.2.2'
+ config.web_console.whitelisted_ips = '10.0.2.2'
 
   
   # Settings specified here will take precedence over those in config/application.rb.

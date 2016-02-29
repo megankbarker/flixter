@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Use CarrierWave-aws to upload files
 gem 'carrierwave'
 
+# handle AWS integration
+gem 'carrierwave-aws'
+
 #video uploads
 gem 'mini_magick'
 

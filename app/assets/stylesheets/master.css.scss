@@ -1,3 +1,27 @@
+.lesson a b {
+  font-weight: 100;
+  font-size:25px;
+}
+
+.lesson a {
+  color:white;
+  font-family: "Helvetica Neue",Helvetica;
+  font-weight:100;
+  font-size: 15px;
+}
+
+.lesson {
+  background-color:black;
+  margin-top:10px;
+  height:130px;
+}
+
+.section {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+}
+
 .field_with_errors {
   color: #ff3333;
   background-color: #FFEEEE;
@@ -6,7 +30,7 @@
   margin:10px;
 }
 
-clr {
+.clr {
   clear:both;
 }
 

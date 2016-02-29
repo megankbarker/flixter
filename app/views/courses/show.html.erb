@@ -1,51 +1,61 @@
+<!-- course detail page -->
+
 <br />
-
+<!--booyah box -->
 <div class="booyah-box col-xs-10 col-xs-offset-1">
-  <h1><%= @course.title %></h1>
-  <%= image_tag @course.image, class: 'img-responsive' %>
-  <div class="col-sm-4 col-xs-12">
-    <span class="label label-default">
-      <%= number_to_currency @course.cost %>
-    </span>
+  <h1 class="text-center"><%= @course.title %></h1>
+  <hr/>
+    <%= image_tag @course.image, class: 'img-responsive' %>
+  <div class="col-xs-10 col-xs-offset-1">
+      <div class="col-sm-4 col-xs-12">
+        <span class="label label-default">
+          <%= number_to_currency @course.cost %>
+        </span>
+          <br />
+          <br />
+      <!-- checks if current user enrolled and shows enroll status -->
+        <% if current_user && current_user.enrolled_in?(@course) %>
+          <h3 class="label label-info">You Are Enrolled!</h3>
+        <% else %>
+          <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
+        <% end %>
+        <hr/>
+      <!-- + -->
+      </div>
+ <br />
+ <!-- course description start -->
 
-    <% if current_user && current_user == @course.user %>
-      <br />
-      <br />
+      <div class="col-sm-8 col-xs-12">
+        <%= @course.description %>
+      </div>
+  </div> <!-- enrollment button and course description end-->
+  <!-- sections begin-->
   
-    <% if current_user && current_user.enrolled_in?(@course) %>
-      <h3 class="label label-info">You Are Enrolled!</h3>
-    <% else %>
-      <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
-    <% end %>
-
-  </div>
-
-  <div class="col-sm-8 col-xs-12">
-    <%= @course.description %>
-  </div>
-
-  <div class="col-xs-12">
+    <div class="section">
     <% @course.sections.each do |section| %>
+    <div class="booyah-box col-xs-10 col-xs-offset-1">
       <br/><br/>
-      <div class="section">
-      <h3>  
+  <!-- individual section separation-->
+      <h3 class="section text-center">  
         <%= section.title %>
       </h3>
         <% section.lessons.each do |lesson| %>
-        <div class="col-xs-12 col-sm-6">
-          <div class="lesson text-center">
-            <br/>
-            <%= link_to lesson_path(lesson) do %>
-            <b><%= lesson.title %></b>
-            <br/>
-            <%= lesson.subtitle %>
-            <% end %>
+          <div class="col-xs-12 col-sm-6">
+            <div class="lesson text-center">
+              <br/>
+              <%= link_to lesson_path(lesson) do %>
+              <b><%= lesson.title %></b> 
+              <br />
+              <%= lesson.subtitle %>
+              <% end %>
+            </div>
           </div>
-        </div>
-      <% end %>
-<br class="clr" />
-    </div>
-  <% end %>
-</div>
-</div>
-<% end %>
+        <% end %> <!-- end info for individual lesson -->
+
+      </div> <!-- closes individual lesson -->
+    <% end %> <!-- end info for individual section -->
+  </div> <!-- closes individual section -->
+
+</div> <!-- closes course and separates page booyah-box and footer -->
+
+  <br class="clr" />

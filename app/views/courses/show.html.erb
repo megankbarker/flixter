@@ -11,6 +11,15 @@
         <span class="label label-default">
           <%= number_to_currency @course.cost %>
         </span>
+<!-- checks if current user is course creator and shows Admin button -->
+        <% if current_user && current_user == @course.user %>
+        <br />
+        <br />
+        <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
+        <% end %>
+
+        <br />
+        <br />
 
       <!-- checks if current user enrolled and shows enroll status -->
         <% if current_user && current_user.enrolled_in?(@course) %>

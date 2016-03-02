@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   database: flixter_development
-  username: postgresql
+  username: postgres
   password: password
   host: localhost
 
@@ -61,7 +61,7 @@ development:
 test:
   <<: *default
   database: flixter_test
-  username: postgressql
+  username: postgres
   password: password
   host: localhost
 
@@ -88,6 +88,6 @@ production:
   <<: *default
   database: flixter_production
   pool: 5
-  username: postgresql
+  username: postgres
   password: password
   host: localhost

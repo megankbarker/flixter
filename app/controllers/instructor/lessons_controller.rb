@@ -21,7 +21,7 @@ class Instructor::LessonsController < ApplicationController
 
   def require_authorized_for_current_lesson
     if current_lesson.section.course.user != current_user
-      render text: 'Unauthorized', status: :unauthorized
+    render text: 'Unauthorized', status: :unauthorized
     end
   end 
 
@@ -31,7 +31,7 @@ class Instructor::LessonsController < ApplicationController
 
   def require_authorized_for_current_section
     if current_section.course.user != current_user
-      return render text: 'Unauthorized', status: :unauthorized # By sending the unauthorized HTTP code, the browser becomes aware that the request was not successful and exits the function not executing line below
+       render text: 'Unauthorized', status: :unauthorized # By sending the unauthorized HTTP code, the browser becomes aware that the request was not successful and exits the function not executing line below
     end
   end
 

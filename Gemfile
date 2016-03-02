@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# jquery UI
+gem 'jquery-ui-rails'
+
 # ranked-model to switch lesson position id easily
 gem 'ranked-model'
 

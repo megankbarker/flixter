@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# ranked-model to switch lesson position id easily
+gem 'ranked-model'
+
 # Use stripe to process credit card payments
 gem 'stripe'
 

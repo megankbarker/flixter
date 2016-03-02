@@ -29,28 +29,46 @@
 <div class="booyah-box col-xs-10 col-xs-offset-1">
   <h1 class="text-center"><%= current_course.title %></h1>
   <br />
-    <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning pull-right' %>  
-  <br class="clr" />
+
+  <div class="index-photoframe">
   <%= image_tag current_course.image, class: 'img-responsive' %>
+  </div>
+  <br/>
   <div class="text-center">
     <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-primary btn-lg' %>
   </div>
-
+    <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning pull-right' %>  
   <ul class="sections">
+  <br/>
     <% current_course.sections.rank(:row_order).each do |section| %>
-      <li data-update-url="<%= instructor_section_path(section) %>">
-        <%= section.title %>
-        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
-        <ul class="lessons">
-          <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url="<%= instructor_lesson_path(lesson) %>">
-              <b><%= lesson.title %></b>
-              -
-              <%= lesson.subtitle %>
-            </li>
-          <% end %>
-        </ul>
-        <br class="clr" />
+      <li data-update-url="<%= instructor_section_path(section) %>" class="section-li">
+        <div class="header">
+          <span class="glyphicon glyphicon-list"></span>
+          <%= section.title %>
+        </div>
+          <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
+          <br class="clr" />
+          <br class="clr" />
+          <ul class="lessons">
+            <% section.lessons.rank(:row_order).each do |lesson| %>
+              <li data-update-url="<%= instructor_lesson_path(lesson) %>">
+                <div class="col-xs-1">
+                  <br/>
+                  <span class="glyphicon glyphicon-list"></span>
+                </div>
+                <div class="col-xs-11 text-center">
+                  <p>
+                <b><%= lesson.title %></b>
+                </p>
+                <p>
+                <%= lesson.subtitle %>
+                </p>
+              </div>
+              <br class="clr" /> <!-- Clear out the Twitter Bootstrap Grid System -->
+              </li>
+            <% end %>
+          </ul>
+          <br class="clr" />
       </li>
 
     <% end %>

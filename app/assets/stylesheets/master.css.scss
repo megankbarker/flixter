@@ -68,6 +68,13 @@ body {
   margin:10px;
 }
 
+.section-li {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+  margin: 20px;
+}
+
 .clr {
   clear:both;
 }
@@ -115,14 +122,14 @@ ul {
   margin: 20px;
 }
 
-// .section {
-//   border: 1px solid;
-//   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-//   padding: 20px;
-// }
+
 
 ul .header {
   font-size: 25px;
+}
+
+ul .header .glyphicon {
+  font-size: 20px;
 }
 
 // .lesson {
@@ -144,3 +151,26 @@ ul .header {
   margin: 0;
 }
 
+.lessons li {
+  background: black;
+  color: white;
+  margin: 10px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  padding: 8px;
+  font-size: 15px;
+}
+
+.index-photoframe {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    img {
+      width: 100%;
+      display: block;
+  }
+}
+.photoframe {
+  padding: 50px;
+  margin-right: 100px;
+}

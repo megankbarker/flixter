@@ -23,7 +23,7 @@ class Instructor::LessonsController < ApplicationController
     if current_lesson.section.course.user != current_user
       render text: 'Unauthorized', status: :unauthorized
     end
-  end
+  end 
 
   def current_lesson
     @current_lesson ||= Lesson.find(params[:id])

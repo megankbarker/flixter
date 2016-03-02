@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Use stripe to process credit card payments
+gem 'stripe'
+
 # Use CarrierWave-aws to upload files
 gem 'carrierwave'
 

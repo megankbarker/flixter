@@ -1,12 +1,9 @@
 class Instructor::LessonsController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_section, only: [:new, :create]
+  before_action :require_authorized_for_current_section, only: [:create]
   before_action :require_authorized_for_current_lesson, only: [:update]
 
-  def new
-    @lesson = Lesson.new # before we add form to the view, we need to give the form a template object for the thing we're building the form for
-  end
-
+ 
   def create 
     @lesson = current_section.lessons.create(lesson_params) # Create the lesson in the database and connect it to the section we looked up.
     redirect_to instructor_course_path(current_section.course) #Redirect the user to the instructor dashboard.

@@ -10,34 +10,19 @@ body {
 #footer {
   height: $footer-height;
   color: white;
-  background-color: #2B1B17;
+  background-color: rgba(130,130,130,0.9);
   font-family: "Helvetica Neue", Helvetica;
   padding:10px 0px;
   margin-top: 30px;
   font-weight: 200;
+
 }
 
 #footer a {
  color: white;
 }
 
-$footer-height-mobile: auto;
-@media (max-width: 750px) {
-  #footer {
-    height:footer-height-mobile;
-  }
-  /* Wrapper for page content to push down footer */
-  #wrap {
-    margin: 0 auto -$footer-height-mobile;
-    /* Pad bottom by footer height */
-    padding: 0 0 $footer-height;
-  }
 
-#footer .social {
-  margin-top: 10px;
-}
-
-}
 .social-button {
   width: 32px;
   margin: 4px;
@@ -47,3 +32,21 @@ $footer-height-mobile: auto;
   text-decoration: none;
 }
 
+$footer-height-mobile: 200px;
+@media (max-width: 750px) {
+  #footer {
+    height:$footer-height-mobile;
+  }
+
+  /* Wrapper for page content to push down footer */
+  #wrap {
+    margin: 0 auto -$footer-height-mobile; // space around (outside) the element from border outwards
+    /* Pad bottom by footer height */
+    padding: 0 0 $footer-height-mobile; //space around (inside) the element from text to border 
+  }
+
+  #footer .social {
+    margin-top: 10px;
+  }
+
+}

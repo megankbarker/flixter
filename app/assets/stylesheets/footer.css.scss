@@ -1,24 +1,13 @@
-$footer-height: 100px;
 
-html,
-body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
-}
 
 /* Set the fixed height of the footer here */
 #footer {
-  height: $footer-height;
   color: white;
   background-color: rgba(130,130,130,0.9);
   font-family: "Helvetica Neue", Helvetica;
   padding:10px 0px;
   margin-top: 30px;
   font-weight: 200;
-  bottom: -$footer-height;
-  // position: absolute;
-  width: 100%;
-
 }
 
 #footer a {
@@ -35,7 +24,7 @@ body {
   text-decoration: none;
 }
 
-$footer-height-mobile: auto;
+$footer-height-mobile: 650px;
 @media (max-width: 750px) {
   #footer {
     height:$footer-height-mobile;
@@ -49,9 +38,19 @@ $footer-height-mobile: auto;
 
   }
 
-
   #footer .social {
     margin-top: 10px;
   }
 
+}
+
+/* Flexbox Sticky Footer CSS */
+.Site {
+  display: flex;
+  min-height: 10vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
 }

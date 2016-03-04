@@ -9,9 +9,10 @@
     <script src="//vjs.zencdn.net/5.0.2/video.js"></script>
 </head>
 
-<body>
+<body class="Site">
 
-<div id="wrap"> 
+
+<div class="Site-content"> 
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -54,7 +55,6 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-</div>
 
 <% if notice.present? %>
   <p class="alert alert-info"><%= notice %></p>
@@ -65,7 +65,7 @@
 
 <%= yield %> 
 
-</div>  <!-- end div wrap keeps footer at bottom" -->
+</div>  <!-- end site content" -->
 
 <br class="clr" /> <!--  explicitly put up a clearing div, so we know the footer starts fresh  -->
 
@@ -114,7 +114,6 @@
         <%= image_tag 'twitter.png', class: 'social-button' %>
       <% end %>
     </div>
-
   </div>
 </div>
 

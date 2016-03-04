@@ -49,13 +49,10 @@
  <br />
  
 
-
   <!-- sections begin-->
   
   <div class="col-xs-12">
     <% @course.sections.rank(:row_order).each do |section| %>
-    <br />
-    <br />
       <!-- individual section separation-->
     <div class="section">
       <h3>  
@@ -64,15 +61,14 @@
       <% section.lessons.rank(:row_order).each do |lesson| %>
           <div class="col-xs-12 col-sm-6">
             <div class="lesson text-center">
-              <br/>
               <%= link_to lesson_path(lesson) do %>
               <b><%= lesson.title %></b> 
-              <br />
               <%= lesson.subtitle %>
               <% end %>
             </div>
           </div>
         <% end %> <!-- closes individual lesson -->
+        <br class="clr" /> <!-- need this so lessons are nested instide section box -->
     </div> <!-- end info for individual section -->
   <% end %> 
   </div>  

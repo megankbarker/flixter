@@ -84,7 +84,7 @@ body {
   padding:40px;
 }
 .booyah-box h2, .booyah-box h1 {
-  margin:10px;
+  margin:0px;
 }
 
 .section-li {
@@ -170,13 +170,13 @@ ul .header .glyphicon {
     img {
       width: 100%;
       display: block;
-      padding: 20px;
+      //padding: 20px;
   }
 }
-.photoframe {
-  padding: 50px;
-  margin-right: 100px;
-}
+// .photoframe {
+//   padding: 50px;
+//   margin-right: 100px;
+// }
 .Site {
   display: flex;
   min-height: 100vh;
@@ -188,8 +188,8 @@ ul .header .glyphicon {
 }
 
 .img-responsive {
-  padding: 15px;
-  width: 100%;
+ // padding: 15px;
+  //width: 100%;
 }
 
 p.alert.alert-info {

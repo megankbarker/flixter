@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6, nav.navbar {
 
 .booyah-box h2, .booyah-box h1 {
     margin: 0px;
+    padding-bottom: 10px;
 }
 
 .booyah-box h2, .booyah-box h1 {
@@ -188,14 +189,26 @@ ul .header .glyphicon {
 }
 
 .img-responsive {
- // padding: 15px;
-  //width: 100%;
+  padding-bottom: 15px;
+  width: 100%; // keeps image at full-width in booyah-box and responsive
 }
 
-p.alert.alert-info {
+p {
   margin: 0px;
 }
 
-p.alert.alert-danger {
-  margin: 0px;
+// p.alert.alert-info {
+//   margin: 0px;
+// }
+
+// p.alert.alert-danger {
+//   margin: 0px;
+// }
+
+div.col-sm-8.col-xs-12 {
+  padding: 0;
+}
+
+div.col-sm-4.col-xs-12 {
+  padding: 0;
 }

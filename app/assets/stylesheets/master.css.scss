@@ -40,6 +40,10 @@ h1, h2, h3, h4, h5, h6, nav.navbar {
     margin: 0px;
 }
 
+.booyah-box h2, .booyah-box h1 {
+    /* margin: 10px; */
+}
+
 .frosty {
   background:rgba(100,40,97,0.35);
   background-size: cover;
@@ -186,4 +190,12 @@ ul .header .glyphicon {
 .img-responsive {
   padding: 15px;
   width: 100%;
+}
+
+p.alert.alert-info {
+  margin: 0px;
+}
+
+p.alert.alert-danger {
+  margin: 0px;
 }

@@ -2,8 +2,8 @@
   border-radius: 0;
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 250;
-  box-shadow: 0px 1px 3px #2a2a2a;
-  background: url('dark_wood.png');
+  box-shadow: 0px 1px 3px #ffffff;
+  background: #2a2a2a;
 }
 
 .navbar-inverse a.navbar-brand {
@@ -19,7 +19,7 @@
   -o-background-size: cover;
   background-size: cover;
   height: 370px;
-  box-shadow: 0px 3px 8px #2a2a2a; // [horizontal offset] [vertical offset] [blur radius] [color]
+  //box-shadow: 0px 3px 8px #2a2a2a; // [horizontal offset] [vertical offset] [blur radius] [color]
 }
 
 h1, h2, h3, h4, h5, h6, nav.navbar {
@@ -27,21 +27,23 @@ h1, h2, h3, h4, h5, h6, nav.navbar {
 } 
 
 .frosty {
-  background:rgba(0,0,0, 0.5);
+  background:rgba(100,40,97,0.35);
+  background-size: cover;
   color: white;
+  height: 370px;
 }
 
 .frosty h1 {
   font-family: "Tondo", sans-serif;
-  font-weight: 200;
-  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+  font-weight: 350;
+  text-shadow: rgba(0,0,0,0.95) 0.5px 0.5px;
   text-align: center;
 }
 
 .frosty h2 {
   font-family: "Tondo", sans-serif;
-  font-weight: 200;
-  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+  font-weight: 250;
+  text-shadow: rgba(0,0,0,0.95) 0.5px 0.5px;
 }
 
 .btn {
@@ -49,14 +51,14 @@ h1, h2, h3, h4, h5, h6, nav.navbar {
 }
 
 body {
-  background: #f2f2f2;
+  background: rgba(223,223,223,0.95);
   font-family: "Tondo",Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
 .booyah-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  // -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  // -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  // box-shadow: 1px 1px 2px 0 #d0d0d0;
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;

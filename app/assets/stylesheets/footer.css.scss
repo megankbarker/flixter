@@ -1,5 +1,3 @@
-
-
 /* Set the fixed height of the footer here */
 #footer {
   color: white;
@@ -29,27 +27,19 @@ $footer-height-mobile: 650px;
   #footer {
     height:$footer-height-mobile;
   }
+}
 
   /* Wrapper for page content to push down footer */
-  // .wrap {
-  //   // margin: 0 auto -$footer-height-mobile; // space around (outside) the element from border outwards
-  //   // /* Pad bottom by footer height */
-  //   // padding: 0 0 $footer-height-mobile; //space around (inside) the element from text to border 
-
-  // }
-  // }
 .wrap {
-    min-height: 100%;
-    height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
-    height: 100%;
-    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+  margin: 0 auto -$footer-height-mobile; // space around (outside) the element from border outwards
+  /* Pad bottom by footer height */
+  padding: 0 0 $footer-height-mobile; //space around (inside) the element from text to border 
 }
 
-  #footer .social {
-    margin-top: 10px;
-  }
-
+#footer .social {
+  margin-top: 10px;
 }
+
 
 /* Flexbox Sticky Footer CSS */
 .Site {

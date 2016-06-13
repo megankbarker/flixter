@@ -44,7 +44,7 @@ $footer-height-mobile: 650px;
 /* Flexbox Sticky Footer CSS */
 .Site {
   display: flex;
-  min-height: 10vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 

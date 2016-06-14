@@ -1,9 +1,4 @@
-// html,
-// body {
-//   height: 100%;
-//   /* The html and body elements cannot have any padding or margin. */
-// }
-
+/* Set the fixed height of the footer here */
 #footer {
   color: white;
   background-color: rgba(130,130,130,0.9);
@@ -27,7 +22,6 @@
   text-decoration: none;
 }
 
-/* Set the fixed height of the footer here */
 // $footer-height-mobile:400px;
 // @media (max-width: 750px) {
 //   #footer {
@@ -46,14 +40,7 @@
 //   }
 // // }
 
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
+
 /* Flexbox Sticky Footer CSS */
 .Site {
   display: flex;

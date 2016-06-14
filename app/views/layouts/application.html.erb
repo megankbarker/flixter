@@ -13,6 +13,7 @@
 
 
 <div class="Site-content"> 
+<div id="wrap">
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -64,58 +65,58 @@
 <% end %>
 
 <%= yield %> 
-
+</div> <!-- end wrap-->
 </div>  <!-- end site content" -->
 
 <br class="clr" /> <!--  explicitly put up a clearing div, so we know the footer starts fresh  -->
 
 
-<div id="footer">
-  <div class="container"> 
+  <div id="footer">
+    <div class="container"> 
+        <div class="col-xs-12 col-sm-3">
+        <b>Teachers</b>
+        <br />
+        <%= link_to 'Teach a course', new_instructor_course_path %>
+        <br />
+        <%= link_to 'My dashboard', dashboard_path %>
+      </div>
+
       <div class="col-xs-12 col-sm-3">
-      <b>Teachers</b>
-      <br />
-      <%= link_to 'Teach a course', new_instructor_course_path %>
-      <br />
-      <%= link_to 'My dashboard', dashboard_path %>
-    </div>
+        <b>About</b>
+        <br />
+        <%= link_to 'Team', team_path %>
+        <br />
+         <%= link_to 'Careers', careers_path %>
+        <br />
+        <%= link_to 'Privacy Policy', privacy_path %>
+      </div>
 
-    <div class="col-xs-12 col-sm-3">
-      <b>About</b>
-      <br />
-      <%= link_to 'Team', team_path %>
-      <br />
-       <%= link_to 'Careers', careers_path %>
-      <br />
-      <%= link_to 'Privacy Policy', privacy_path %>
-    </div>
+      <div class="col-xs-12 col-sm-3">
+        <b>Contact</b>
+        <br />
+        <a href="mailto:helloladybread@gmail.com">helloladybread@gmail.com</a>
+        <br />
+        Cherry Tree Lane
+        <br />
+        Carmel Valley, CA 93924
+      </div>
 
-    <div class="col-xs-12 col-sm-3">
-      <b>Contact</b>
-      <br />
-      <a href="mailto:helloladybread@gmail.com">helloladybread@gmail.com</a>
-      <br />
-      Cherry Tree Lane
-      <br />
-      Carmel Valley, CA 93924
-    </div>
-
-    <div class="col-xs-12 col-sm-3 social">
-      <b>Social</b>
-      <br />
-      <br />
-      <%= link_to 'http://github.com/megankbarker' do %>
-        <%= image_tag 'github_v2.png', class: 'social-button' %>
-      <% end %>
-      <%= link_to '#' do %>
-        <%= image_tag 'facebook.png', class: 'social-button' %>
-      <% end %>
-      <%= link_to '#' do %>
-        <%= image_tag 'twitter.png', class: 'social-button' %>
-      <% end %>
+      <div class="col-xs-12 col-sm-3 social">
+        <b>Social</b>
+        <br />
+        <br />
+        <%= link_to 'http://github.com/megankbarker' do %>
+          <%= image_tag 'github_v2.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to '#' do %>
+          <%= image_tag 'facebook.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to '#' do %>
+          <%= image_tag 'twitter.png', class: 'social-button' %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 </div>
 </body>
 </html>

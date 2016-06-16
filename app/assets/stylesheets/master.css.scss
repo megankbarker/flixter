@@ -32,7 +32,7 @@ h2, .h2 {
 
 
 .hero {
-  background: url('/assets/hero4.jpg') no-repeat center center fixed; //css so entire photo is displayed nicely cropped like a banner
+  background: url('hero4.jpg') no-repeat center center fixed; //css so entire photo is displayed nicely cropped like a banner
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -85,8 +85,8 @@ h1, h2, h3, h4, h5, h6, nav.navbar {
 
 body {
   // background: rgba(223,223,223,0.95);
-  background: url('/assets/noisy_grid.png');
-  font-family: "Tondo",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  background: url('noisy_grid.png');
+  font-family: "PT Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
 .booyah-box {

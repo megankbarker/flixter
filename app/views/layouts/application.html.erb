@@ -12,8 +12,8 @@
 <body class="Site">
 
 
-<div class="Site-content"> 
-<!-- <div id="wrap"> -->
+<div class="Site-content">  <!-- similar to <div id="wrap"> -->
+
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,12 +63,12 @@
 <% if alert.present? %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-
+<!-- sticky footer starts here -->
 <%= yield %> 
-</div> <!-- end wrap-->
-</div>  <!-- end site content" -->
+</div> <!-- end site content aka wrap -->
 
-<br class="clr" /> <!--  explicitly put up a clearing div, so we know the footer starts fresh  -->
+
+<!-- <br class="clr" />  --><!--  explicitly put up a clearing div, so we know the footer starts fresh  -->
 
 
   <div id="footer">
@@ -116,7 +116,8 @@
         <% end %>
       </div>
 <!--     </div> -->
-  </div>
-</div>
+  </div> <!-- end div container -->
+</div> <!-- end footer -->
+</div> <!-- end site content -->
 </body>
 </html>
